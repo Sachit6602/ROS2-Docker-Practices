@@ -29,7 +29,7 @@ setup(
             'driving_node = maze_bot.driving:main',
             'go_to_goal = maze_bot.go_to_goal:main',
             'video_recorder = maze_bot.video_saver:main',
-            'maze_solver = maze_bot.maze_solver:main',
+            'maze_solver = maze_solve.maze_solver:main',
             'launch_maze = maze_solve.launch.launch_maze:main',  # New entry point
         ],
     },
