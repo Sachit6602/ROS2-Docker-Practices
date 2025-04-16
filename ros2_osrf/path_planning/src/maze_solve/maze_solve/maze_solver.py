@@ -15,6 +15,7 @@ from numpy import interp
 
 from .utilities import Debugging
 from . import config
+from .bot_map import bot_mapper
 
 class maze_solve(Node):
 
@@ -30,6 +31,7 @@ class maze_solve(Node):
         self.vel_msg = Twist()
 
         self.bot_localizer = bot_localizer()
+        self.bot_mapper = bot_mapper()
 
         self.sat_view = np.zeros((100,100))
     
@@ -42,6 +44,7 @@ class maze_solve(Node):
     def maze_solving(self):
         frame_disp = self.sat_view.copy()
         self.bot_localizer.localize_bot(self.sat_view, frame_disp)
+        self.bot_mapper.graphify(self.bot_localizer.maze_og)
         self.vel_msg.linear.x = 0.0
         self.vel_msg.linear.z = 0.0
 
