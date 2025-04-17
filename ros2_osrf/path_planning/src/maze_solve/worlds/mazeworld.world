@@ -121,9 +121,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Bricks</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -166,9 +166,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Bricks</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -211,9 +211,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -256,9 +256,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -301,9 +301,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -346,9 +346,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -391,9 +391,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -436,9 +436,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -481,9 +481,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -526,9 +526,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -571,9 +571,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -616,9 +616,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -661,9 +661,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -706,9 +706,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Bricks</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -751,9 +751,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -796,9 +796,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -841,9 +841,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -886,9 +886,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -931,9 +931,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -976,9 +976,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -1021,9 +1021,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/CeilingTiled</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -1066,9 +1066,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Bricks</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -1111,9 +1111,9 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Bricks</name>
+              <name>Gazebo/Blue</name>
             </script>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
           </material>
           <meta>
             <layer>0</layer>
@@ -1438,7 +1438,7 @@
           </geometry>
           <material>
             <script>
-              <name>Gazebo/Blue</name>
+              <name>Gazebo/Orange</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
           </material>
