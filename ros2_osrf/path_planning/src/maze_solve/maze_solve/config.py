@@ -14,3 +14,12 @@ MAZE_WALL_THICKNESS = 0.02  # meters
 
 # Debug parameters
 DEBUG_MODE = True
+debug = False
+debug_localization = False
+debug_mapping = False
+debug_pathplanning = False
+debug_motionplanning = False
+debug_live = False
+debug_live_amount = 0.0
+debug_map_live_amount = 0.0
+debug_path_live_amount = 0.0
