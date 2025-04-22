@@ -17,6 +17,7 @@ from .utilities import Debugging
 from . import config
 from .bot_map import bot_mapper
 from .bot_path import bot_pathplanner
+from .bot_motion import bot_motionplanning
 
 class maze_solve(Node):
 
@@ -25,6 +26,7 @@ class maze_solve(Node):
         super().__init__("maze_solving_node")
 
         self.velocity_publisher = self.create_publisher(Twist,'/cmd_vel',10)
+        #self.videofeed_subscriber = self.create_subscription(Image,'/upper_camera/image_raw',self.get_video_feed_cb,10)
         self.videofeed_subscriber = self.create_subscription(Image,'/camera/overhead_camera/image_raw',self.get_video_feed_cb,10)
 
         self.timer = self.create_timer(0.2, self.maze_solving)
@@ -34,6 +36,9 @@ class maze_solve(Node):
         self.bot_localizer = bot_localizer()
         self.bot_mapper = bot_mapper()
         self.bot_pathplanner = bot_pathplanner()
+        self.bot_motionplanner = bot_motionplanning()
+
+        self.pose_subscriber = self.create_subscription(Odometry,'/odom', self.bot_motionplanner.get_pose,10)
 
         self.sat_view = np.zeros((100,100))
     
@@ -52,8 +57,17 @@ class maze_solve(Node):
         end = self.bot_mapper.Graph.end
         maze = self.bot_mapper.maze
 
-        self.bot_pathplanner.find_path_nd_display(self.bot_mapper.Graph.graph, start, end, maze)
+        self.bot_pathplanner.find_path_nd_display(self.bot_mapper.Graph.graph, start, end, maze, method="dijisktra")
+        self.bot_pathplanner.find_path_nd_display(self.bot_mapper.Graph.graph, start, end, maze, method="a_star")
+        print("\nNodes Visited [Dijisktra V A-Star*] = [ {} V {} ]".format(self.bot_pathplanner.dijisktra.dijiktra_nodes_visited,self.bot_pathplanner.astar.astar_nodes_visited))
+        #cv2.waitKey(0)
         #self.bot_mapper.one_pass(self.bot_localizer.maze_og)
+
+        bot_loc = self.bot_localizer.loc_car
+        path = self.bot_pathplanner.path_to_goal
+        self.bot_motionplanner.nav_path(bot_loc, path, self.vel_msg, self.velocity_publisher)
+
+        
         self.vel_msg.linear.x = 0.0
         self.vel_msg.linear.z = 0.0
 
