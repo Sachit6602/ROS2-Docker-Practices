@@ -1154,10 +1154,10 @@
         </link>
       </model>
       <model name='camera2'>
-        <pose>0.028527 5.9e-05 18.2359 3.14159 1.56055 3.14159</pose>
+        <pose>0.028527 5.9e-05 18.2359 1.56055 1.56055 3.14159</pose>
         <scale>1 1 1</scale>
         <link name='camera_link'>
-          <pose>0.028527 5.9e-05 18.2359 3.14159 1.56055 3.14159</pose>
+          <pose>0.028527 5.9e-05 18.2359 1.56055 1.56055 3.14159</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1438,7 +1438,7 @@
           </geometry>
           <material>
             <script>
-              <name>Gazebo/Orange</name>
+              <name>Gazebo/Red</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
           </material>
