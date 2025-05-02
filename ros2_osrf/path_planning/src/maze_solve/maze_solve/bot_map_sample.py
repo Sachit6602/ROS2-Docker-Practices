@@ -36,7 +36,7 @@ class Graph():
         for key,value in self.graph.items():
             print("key {} has value {} ".format(key,value))
 
-# Bot_Mapper Class for performing Stage 2 (mapping) of robot navigation
+# bot_Mapper Class for performing mapping of robot navigation
 class bot_mapper():
 
     def __init__(self):
@@ -64,7 +64,7 @@ class bot_mapper():
         self.maze = 0
 
 
-    # Display connection between nodes with a colored line
+    # display connection between nodes with a colored line
     def display_connected_nodes(self,curr_node,neighbor_node,case="Unkown",color=(0,0,255)):
         curr_pixel = (curr_node[1],curr_node[0])
         neighbor_pixel = (neighbor_node[1],neighbor_node[0])
@@ -78,7 +78,7 @@ class bot_mapper():
             cv2.waitKey(0)                    
             self.maze_connect = cv2.line(self.maze_connect,curr_pixel,neighbor_pixel,(255,255,255),1)
 
-    # Connect curr_node to its neighbors in immediate [left -> top-right] region 
+    # connect curr_node to its neighbors in immediate [left -> top-right] region 
     def connect_neighbors(self,maze,node_row,node_col,case,step_l = 1,step_up = 0,totl_cnncted = 0):
         
         curr_node = (node_row,node_col)
@@ -195,7 +195,7 @@ class bot_mapper():
     @staticmethod
     def get_surround_pixel_intensities(maze,curr_row,curr_col):
 
-        # binary thrsholding and setting (+ values ==> 1 
+        # binary thresholding and setting (+ values ==> 1 
         #                                 - values ==> 0)
         maze = cv2.threshold(maze, 1, 1, cv2.THRESH_BINARY)[1]
 
@@ -289,7 +289,7 @@ class bot_mapper():
         self.maze_connect = cv2.cvtColor(maze, cv2.COLOR_GRAY2BGR)
         cv2.namedWindow("Nodes Conected",cv2.WINDOW_FREERATIO)
 
-        # Initialize counts of Ip's
+        # Initialize counts of Interest Points
         turns = 0
         junc_3 = 0
         junc_4 = 0
@@ -313,7 +313,7 @@ class bot_mapper():
                     # Probable IP => Find Surrounding Pixel Intensities
                     top_left,top,top_rgt,rgt,btm_rgt,btm,btm_left,lft, paths = self.get_surround_pixel_intensities(maze.copy(),row,col)
 
-                    if ( (row==0) or (row == (rows-1)) or (col==0) or (col == (cols-1)) ):
+                    if ((row==0) or (row == (rows-1)) or (col==0) or (col == (cols-1))):
                         if (row == 0):
                             # Start
                             maze_bgr[row][col] = (0,128,255)
@@ -405,26 +405,26 @@ class bot_mapper():
         # Check graph extracted or not from the maze
         if not self.graphified:
 
-            # Step 1: Peforming thinning on maze to reduce area to paths that car could follow.
+            #1) Peforming thinning on maze to reduce area to paths that car could follow.
             thinned = cv2.ximgproc.thinning(extracted_maze)
 
-            # Step 2: Dilate and Perform thining again to minimize unneccesary interest point (i.e:turns)
+            #2) Dilate and Perform thining again to minimize unneccesary interest point (i.e:turns)
             kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(2,2))
             thinned_dilated = cv2.morphologyEx(thinned, cv2.MORPH_DILATE, kernel)
             _, bw2 = cv2.threshold(thinned_dilated, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)        
             thinned = cv2.ximgproc.thinning(bw2)
             
-            # Step 3: Crop out Boundary that is not part of maze
+            #3) Crop out Boundary that is not part of maze
             thinned_cropped = thinned[self.crp_amt:thinned.shape[0]-self.crp_amt,
                                       self.crp_amt:thinned.shape[1]-self.crp_amt]
 
-            # Step 4: Overlay found path on Maze Occupency Grid.
+            #4) Overlay found path on Maze Occupency Grid.
             extracted_maze_cropped = extracted_maze[self.crp_amt:extracted_maze.shape[0]-self.crp_amt,
                                                     self.crp_amt:extracted_maze.shape[1]-self.crp_amt]
             extracted_maze_cropped = cv2.cvtColor(extracted_maze_cropped, cv2.COLOR_GRAY2BGR)
             extracted_maze_cropped[thinned_cropped>0] = (0,255,255)
             
-            # Step 5: Identify Interest Points in the path to further reduce processing time
+            #5) Identify Interest Points in the path to further reduce processing time
             self.one_pass(thinned_cropped)
             #cv2.waitKey(0)
             self.maze = thinned_cropped
@@ -437,7 +437,6 @@ class bot_mapper():
             cv2.imshow('Maze (thinned*2)(Cropped)(Path_Overlayed)', extracted_maze_cropped)
             
            
-
 
 
 
