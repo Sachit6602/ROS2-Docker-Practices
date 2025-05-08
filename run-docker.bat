@@ -16,4 +16,9 @@ docker run -it --rm ^
     --name ros2 ^
     -v "%HOST_WORKSPACE%:/workspace" ^
     -e DISPLAY=host.docker.internal:0.0 ^
-    %IMAGE_NAME%
+    -e LIBGL_ALWAYS_INDIRECT=0 ^
+    %IMAGE_NAME% bash -c "source /opt/ros/foxy/setup.bash && cd /workspace/path_planning && colcon build && source install/setup.bash && bash" 
+
+
+@echo off
+docker exec -it ros2 bash -c "source /opt/ros/foxy/setup.bash && cd workspace/path_planning && source install/setup.bash && bash"
