@@ -140,7 +140,7 @@ class DFS():
         # Update the path to where ever you have been to
         path = path + [start]
 
-        # 2) Define the simplest case
+        # define the simplest case
         if (start == end):
             return [path]
 
@@ -231,12 +231,12 @@ class Heap():
         if ((right<self.size) and (self.array[right][1]<self.array[smallest][1])):
             smallest = right
 
-        # If node_idx is not the smallest
+        # If node index is not the smallest
         if(smallest != node_idx):
             # Update the positions to keep smallest on top
             self.posOfVertices[self.array[node_idx][0]] = smallest
             self.posOfVertices[self.array[smallest][0]] = node_idx
-            # Swap node_idx with smallest
+            # Swap node index with smallest
             self.swap_nodes(node_idx, smallest)
             # Recursively call minHeapify until all subnodes part of minheap or no more subnodes left
             self.minHeapify(smallest)
